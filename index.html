@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://picsum.photos/32/32" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>متجر المنتجات الرقمية</title>
+    <title>DigiStore - متجر المنتجات الرقمية</title>
     
-    <!-- Google Fonts: Cairo for professional Arabic typography -->
+    <!-- Google Fonts: Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -21,26 +21,180 @@
               sans: ['Cairo', 'sans-serif'],
             },
             colors: {
-              primary: '#25D366', // WhatsApp Green
+              primary: '#25D366',
               secondary: '#1e293b',
               accent: '#3b82f6',
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.3s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
             }
           }
         }
       }
     </script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
   <body class="bg-gray-50 text-slate-800 font-sans">
-    <div id="root"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-40 backdrop-blur-lg bg-white/80">
+      <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-gradient-to-tr from-accent to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
+            D
+          </div>
+          <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent">
+            متجر ديجيتال
+          </h1>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+          <a href="#" class="hover:text-accent transition-colors">الرئيسية</a>
+          <a href="#products" class="hover:text-accent transition-colors">المنتجات</a>
+          <a href="#features" class="hover:text-accent transition-colors">المميزات</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-secondary text-white py-20 overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-accent rounded-full blur-3xl opacity-20"></div>
+      
+      <div class="container mx-auto px-4 relative z-10 text-center max-w-3xl">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-accent text-sm font-bold mb-6">
+          ✨ منتجات رقمية احترافية
+        </span>
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+          ارتقِ بمهاراتك مع <span class="text-accent">أفضل الأدوات الرقمية</span>
+        </h2>
+        <p class="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
+          كتب إلكترونية، قوالب جاهزة، ودورات تدريبية. تسليم فوري وروابط مباشرة.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#products" class="w-full sm:w-auto px-8 py-3.5 bg-accent hover:bg-blue-600 text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 transition-all">
+            تصفح المنتجات
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100">
+            <div class="w-14 h-14 bg-blue-100 text-accent rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="zap" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">تسليم فوري</h3>
+            <p class="text-gray-500">احصل على منتجك فور إتمام الطلب.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100">
+            <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="shield-check" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">جودة مضمونة</h3>
+            <p class="text-gray-500">ملفات مراجعة بعناية لتضمن لك الفائدة.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100">
+            <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">دعم فني</h3>
+            <p class="text-gray-500">فريقنا جاهز دائماً للمساعدة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section id="products" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">أحدث المنتجات</h2>
+          <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+        </div>
+        
+        <!-- Grid Container populated by JS -->
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Products will be injected here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-gray-400 py-12 border-t border-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-white text-xl font-bold mb-2">متجر المنتجات الرقمية</h3>
+        <p class="text-sm mb-4">جميع الحقوق محفوظة &copy; 2025</p>
+      </div>
+    </footer>
+
+    <!-- Order Modal (Hidden by default) -->
+    <div id="order-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+      <!-- Backdrop -->
+      <div id="modal-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+      <!-- Modal Content -->
+      <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-fade-in-up">
+        <div class="bg-secondary p-4 flex justify-between items-center text-white">
+          <h3 class="text-lg font-bold">إكمال الطلب</h3>
+          <button id="close-modal-btn" class="p-1 hover:bg-white/10 rounded-full transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div class="p-6">
+          <div class="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-100">
+            <p class="text-sm text-blue-800 font-medium">أنت تطلب: <span id="modal-product-title" class="font-bold"></span></p>
+            <p class="text-xl font-bold text-blue-600 mt-1"><span id="modal-product-price"></span> درهم مغربي</p>
+          </div>
+
+          <form id="order-form" class="space-y-4">
+            <input type="hidden" id="product-id">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">الاسم الكامل</label>
+              <input type="text" id="customer-name" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary outline-none" placeholder="مثال: محمد العمري">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">رقم الهاتف</label>
+              <input type="tel" id="customer-phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary outline-none text-right" placeholder="مثال: 0612345678" dir="ltr">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">المدينة</label>
+              <input type="text" id="customer-city" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary outline-none" placeholder="مثال: الدار البيضاء">
+            </div>
+
+            <button type="submit" class="w-full bg-[#25D366] hover:bg-[#1fb855] text-white font-bold py-3 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 mt-6">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span>إرسال الطلب عبر واتساب</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Logic Script -->
+    <script src="script.js"></script>
   </body>
 </html>
