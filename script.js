@@ -2,51 +2,51 @@
 const products = [
   {
     id: '1',
-    title: 'دليل التسويق الإلكتروني الشامل',
-    description: 'كتاب إلكتروني يحتوي على استراتيجيات حديثة للتسويق وزيادة المبيعات.',
-    price: 99,
-    imageUrl: 'https://picsum.photos/id/20/800/600',
-    fileType: 'PDF'
+    title: 'اشتراك نتفليكس بريميوم (شهر)',
+    description: 'حساب 4K UHD رسمي، ضمان طوال فترة الاشتراك، يدعم اللغة العربية، ملف خاص بك.',
+    price: 35,
+    imageUrl: 'https://images.unsplash.com/photo-1574375927938-d5a98e8efe30?auto=format&fit=crop&w=800&q=80',
+    fileType: 'ACCOUNT'
   },
   {
     id: '2',
-    title: 'حزمة قوالب سيرة ذاتية احترافية',
-    description: 'أكثر من 50 قالب سيرة ذاتية جاهز للتعديل بصيغة Word و PSD.',
-    price: 49,
-    imageUrl: 'https://picsum.photos/id/24/800/600',
-    fileType: 'ZIP'
+    title: 'مفتاح تفعيل ويندوز 11 برو',
+    description: 'كود تفعيل أصلي 100% مدى الحياة، يدعم التحديثات الرسمية وإعادة التثبيت.',
+    price: 99,
+    imageUrl: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80',
+    fileType: 'KEY'
   },
   {
     id: '3',
-    title: 'دورة أساسيات التصميم الجرافيكي',
-    description: 'سلسلة فيديوهات تعليمية تشرح أساسيات التصميم للمبتدئين.',
-    price: 199,
-    imageUrl: 'https://picsum.photos/id/3/800/600',
-    fileType: 'VIDEO'
+    title: 'أوفيس 365 برو بلس (5 أجهزة)',
+    description: 'حساب يضم حزمة الأوفيس كاملة (Word, Excel, PPT) مع مساحة تخزين 1TB سحابة.',
+    price: 69,
+    imageUrl: 'https://images.unsplash.com/photo-1633419461186-7d75ce2ef995?auto=format&fit=crop&w=800&q=80',
+    fileType: 'ACCOUNT'
   },
   {
     id: '4',
-    title: 'مخطط الإنتاجية السنوي 2025',
-    description: 'ملف رقمي جاهز للطباعة لتنظيم وقتك ومهامك وأهدافك.',
-    price: 29,
-    imageUrl: 'https://picsum.photos/id/180/800/600',
-    fileType: 'PDF'
+    title: 'اشتراك سبوتيفاي (3 أشهر)',
+    description: 'تفعيل بريميوم على حسابك الشخصي، استمتع بالموسيقى بدون إعلانات وبجودة عالية.',
+    price: 49,
+    imageUrl: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&w=800&q=80',
+    fileType: 'INVITE'
   },
   {
     id: '5',
-    title: 'مكتبة الأيقونات العصرية',
-    description: 'مجموعة ضخمة من الأيقونات المتجهة (SVG) للتصميم.',
-    price: 79,
-    imageUrl: 'https://picsum.photos/id/60/800/600',
-    fileType: 'ZIP'
+    title: 'كانفا برو (اشتراك تعليمي)',
+    description: 'انضمام لفريق كانفا برو لتفعيل جميع المميزات المدفوعة والقوالب على حسابك.',
+    price: 29,
+    imageUrl: 'https://images.unsplash.com/photo-1626785774573-4b7993143d2d?auto=format&fit=crop&w=800&q=80',
+    fileType: 'INVITE'
   },
   {
     id: '6',
-    title: 'بريسيتات لايت روم احترافية',
-    description: 'فلاتر جاهزة لتعديل الصور بضغطة زر واحدة.',
-    price: 59,
-    imageUrl: 'https://picsum.photos/id/91/800/600',
-    fileType: 'ZIP'
+    title: 'اشتراك IPTV ذهبي (سنة كاملة)',
+    description: 'أضخم مكتبة قنوات عالمية، أفلام ومسلسلات بجودة 4K، سيرفرات ثابتة بدون تقطيع.',
+    price: 199,
+    imageUrl: 'https://images.unsplash.com/photo-1593784653056-16a374715816?auto=format&fit=crop&w=800&q=80',
+    fileType: 'SUB'
   }
 ];
 
@@ -134,7 +134,7 @@ function handleFormSubmit(e) {
   const phone = document.getElementById('customer-phone').value;
   const city = document.getElementById('customer-city').value;
   
-  // رقم الواتساب الخاص بالبائع (غيره هنا)
+  // رقم الواتساب الخاص بالبائع
   const SELLER_PHONE = '212600000000'; 
   
   const message = `
